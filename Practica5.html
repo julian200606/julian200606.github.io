@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica5</title>
+</head>
+<body>
+    <h2>Formulario</h2><hr>
+    <label for="nombre">Nombre:</label>
+    <input type="text" placeholder="Teclea un nombre"Required><br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" placeholder="Teclea edad:"Required>
+
+    <label for="fecha_de_nacimiento">fecha de nacimiento:</label>
+    <input type="date" Required><br><br>
+
+    <input type="radio" name="sexo" required>femenino
+    <input type="radio" name="sexo" required>masculino
+    <br><br>
+
+    <label for="direccion">Direccion</label><br>
+    <textarea name="direccion" id="" cols="38" rows="18" placeholder="Teclea direccion"></textarea>
+    <br><br>
+
+    <label for="escuela">Escuela</label>
+    <select name="escuela" id="">
+        <option value="Selecciona una escuela">Selecciona una escuela</option>
+        <option value="Cetis">Cetis</option>
+        <option value="Cbtis">Cbtis</option>
+        <option value="Otro">Otro</option>
+    </select><br>
+
+    <label for="materias"><b>Materias cursadas</b></label><br>
+    <input type="checkbox" name="materias[]"> Física<br>
+    <input type="checkbox" name="materias[]"> Cálculo diferencial<br>
+    <input type="checkbox" name="materias[]"> Inglés<br>
+    <input type="checkbox" name="materias[]"> Programación web<br><br>
+
+    <label for="imagen_perfil"><b>imagen de perfil</b></label><br>
+    <input type="file" accept="png/jpg"><br><br>
+
+    <input type="submit" value="Guardar Alumno"><br><br><br>
+
+</body>
+</html>
