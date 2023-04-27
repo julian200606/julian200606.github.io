@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 21-04-2023 a las 04:15:27
--- Versión del servidor: 10.1.39-MariaDB
--- Versión de PHP: 7.3.5
+-- Host: 127.0.0.1
+-- Generation Time: Apr 27, 2023 at 04:19 AM
+-- Server version: 10.1.39-MariaDB
+-- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `spotifi`
+-- Database: `spotifi`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `albumes`
+-- Table structure for table `albumes`
 --
 
 CREATE TABLE `albumes` (
@@ -35,7 +35,7 @@ CREATE TABLE `albumes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `albumes`
+-- Dumping data for table `albumes`
 --
 
 INSERT INTO `albumes` (`id`, `artista_id`, `nombre`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `albumes` (`id`, `artista_id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `album_canciones`
+-- Table structure for table `album_canciones`
 --
 
 CREATE TABLE `album_canciones` (
@@ -57,7 +57,7 @@ CREATE TABLE `album_canciones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `album_canciones`
+-- Dumping data for table `album_canciones`
 --
 
 INSERT INTO `album_canciones` (`id`, `album_id`, `cancion_id`) VALUES
@@ -69,7 +69,7 @@ INSERT INTO `album_canciones` (`id`, `album_id`, `cancion_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `artistas`
+-- Table structure for table `artistas`
 --
 
 CREATE TABLE `artistas` (
@@ -79,7 +79,7 @@ CREATE TABLE `artistas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `artistas`
+-- Dumping data for table `artistas`
 --
 
 INSERT INTO `artistas` (`id`, `nombre`, `imagen`) VALUES
@@ -91,7 +91,7 @@ INSERT INTO `artistas` (`id`, `nombre`, `imagen`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `canciones`
+-- Table structure for table `canciones`
 --
 
 CREATE TABLE `canciones` (
@@ -105,7 +105,7 @@ CREATE TABLE `canciones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `canciones`
+-- Dumping data for table `canciones`
 --
 
 INSERT INTO `canciones` (`id`, `nombre`, `artista_id`, `duracion`, `genero_id`, `fecha`, `disponible`) VALUES
@@ -117,7 +117,7 @@ INSERT INTO `canciones` (`id`, `nombre`, `artista_id`, `duracion`, `genero_id`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `favoritas`
+-- Table structure for table `favoritas`
 --
 
 CREATE TABLE `favoritas` (
@@ -127,7 +127,7 @@ CREATE TABLE `favoritas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `favoritas`
+-- Dumping data for table `favoritas`
 --
 
 INSERT INTO `favoritas` (`id`, `usuario_id`, `cancion_id`) VALUES
@@ -139,7 +139,7 @@ INSERT INTO `favoritas` (`id`, `usuario_id`, `cancion_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `generos`
+-- Table structure for table `generos`
 --
 
 CREATE TABLE `generos` (
@@ -148,7 +148,7 @@ CREATE TABLE `generos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `generos`
+-- Dumping data for table `generos`
 --
 
 INSERT INTO `generos` (`id`, `nombre`) VALUES
@@ -160,7 +160,7 @@ INSERT INTO `generos` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `membresias`
+-- Table structure for table `membresias`
 --
 
 CREATE TABLE `membresias` (
@@ -170,7 +170,7 @@ CREATE TABLE `membresias` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `membresias`
+-- Dumping data for table `membresias`
 --
 
 INSERT INTO `membresias` (`id`, `nombre`, `precio`) VALUES
@@ -182,7 +182,7 @@ INSERT INTO `membresias` (`id`, `nombre`, `precio`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `playlist`
+-- Table structure for table `playlist`
 --
 
 CREATE TABLE `playlist` (
@@ -193,7 +193,7 @@ CREATE TABLE `playlist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `playlist`
+-- Dumping data for table `playlist`
 --
 
 INSERT INTO `playlist` (`id`, `nombre`, `imagen`, `usuario_id`) VALUES
@@ -205,7 +205,7 @@ INSERT INTO `playlist` (`id`, `nombre`, `imagen`, `usuario_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `playlist_canciones`
+-- Table structure for table `playlist_canciones`
 --
 
 CREATE TABLE `playlist_canciones` (
@@ -215,7 +215,7 @@ CREATE TABLE `playlist_canciones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `playlist_canciones`
+-- Dumping data for table `playlist_canciones`
 --
 
 INSERT INTO `playlist_canciones` (`id`, `playlist_id`, `cancion_id`) VALUES
@@ -227,7 +227,7 @@ INSERT INTO `playlist_canciones` (`id`, `playlist_id`, `cancion_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -241,7 +241,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `contraseña`, `usuario`, `telefono`, `membresia_id`) VALUES
@@ -251,18 +251,18 @@ INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `contraseña`, `usuario`, `tel
 (4, 'Joseph Eloir', 'mezacastañeda@gmail.com', '32454nN2', 'josefina', '763728992', 3);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `albumes`
+-- Indexes for table `albumes`
 --
 ALTER TABLE `albumes`
   ADD PRIMARY KEY (`id`),
   ADD KEY `artista_id` (`artista_id`);
 
 --
--- Indices de la tabla `album_canciones`
+-- Indexes for table `album_canciones`
 --
 ALTER TABLE `album_canciones`
   ADD PRIMARY KEY (`id`),
@@ -270,13 +270,13 @@ ALTER TABLE `album_canciones`
   ADD KEY `cancion_id` (`cancion_id`);
 
 --
--- Indices de la tabla `artistas`
+-- Indexes for table `artistas`
 --
 ALTER TABLE `artistas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `canciones`
+-- Indexes for table `canciones`
 --
 ALTER TABLE `canciones`
   ADD PRIMARY KEY (`id`),
@@ -286,7 +286,7 @@ ALTER TABLE `canciones`
   ADD KEY `genero_id_3` (`genero_id`);
 
 --
--- Indices de la tabla `favoritas`
+-- Indexes for table `favoritas`
 --
 ALTER TABLE `favoritas`
   ADD PRIMARY KEY (`id`),
@@ -294,26 +294,26 @@ ALTER TABLE `favoritas`
   ADD KEY `usuario_id` (`usuario_id`);
 
 --
--- Indices de la tabla `generos`
+-- Indexes for table `generos`
 --
 ALTER TABLE `generos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `membresias`
+-- Indexes for table `membresias`
 --
 ALTER TABLE `membresias`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `playlist`
+-- Indexes for table `playlist`
 --
 ALTER TABLE `playlist`
   ADD PRIMARY KEY (`id`),
   ADD KEY `usuario_id` (`usuario_id`);
 
 --
--- Indices de la tabla `playlist_canciones`
+-- Indexes for table `playlist_canciones`
 --
 ALTER TABLE `playlist_canciones`
   ADD PRIMARY KEY (`id`),
@@ -321,122 +321,122 @@ ALTER TABLE `playlist_canciones`
   ADD KEY `cancion_id` (`cancion_id`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
   ADD KEY `membresia_id` (`membresia_id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `albumes`
+-- AUTO_INCREMENT for table `albumes`
 --
 ALTER TABLE `albumes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `album_canciones`
+-- AUTO_INCREMENT for table `album_canciones`
 --
 ALTER TABLE `album_canciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `artistas`
+-- AUTO_INCREMENT for table `artistas`
 --
 ALTER TABLE `artistas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `canciones`
+-- AUTO_INCREMENT for table `canciones`
 --
 ALTER TABLE `canciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `favoritas`
+-- AUTO_INCREMENT for table `favoritas`
 --
 ALTER TABLE `favoritas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `generos`
+-- AUTO_INCREMENT for table `generos`
 --
 ALTER TABLE `generos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT de la tabla `membresias`
+-- AUTO_INCREMENT for table `membresias`
 --
 ALTER TABLE `membresias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `playlist`
+-- AUTO_INCREMENT for table `playlist`
 --
 ALTER TABLE `playlist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `playlist_canciones`
+-- AUTO_INCREMENT for table `playlist_canciones`
 --
 ALTER TABLE `playlist_canciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `albumes`
+-- Constraints for table `albumes`
 --
 ALTER TABLE `albumes`
   ADD CONSTRAINT `albumes_ibfk_1` FOREIGN KEY (`artista_id`) REFERENCES `artistas` (`id`);
 
 --
--- Filtros para la tabla `album_canciones`
+-- Constraints for table `album_canciones`
 --
 ALTER TABLE `album_canciones`
   ADD CONSTRAINT `album_canciones_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `albumes` (`id`),
   ADD CONSTRAINT `album_canciones_ibfk_2` FOREIGN KEY (`cancion_id`) REFERENCES `canciones` (`id`);
 
 --
--- Filtros para la tabla `canciones`
+-- Constraints for table `canciones`
 --
 ALTER TABLE `canciones`
   ADD CONSTRAINT `canciones_ibfk_1` FOREIGN KEY (`artista_id`) REFERENCES `artistas` (`id`),
   ADD CONSTRAINT `canciones_ibfk_2` FOREIGN KEY (`genero_id`) REFERENCES `generos` (`id`);
 
 --
--- Filtros para la tabla `favoritas`
+-- Constraints for table `favoritas`
 --
 ALTER TABLE `favoritas`
   ADD CONSTRAINT `favoritas_ibfk_1` FOREIGN KEY (`cancion_id`) REFERENCES `canciones` (`id`),
   ADD CONSTRAINT `favoritas_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
 
 --
--- Filtros para la tabla `playlist`
+-- Constraints for table `playlist`
 --
 ALTER TABLE `playlist`
   ADD CONSTRAINT `playlist_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
 
 --
--- Filtros para la tabla `playlist_canciones`
+-- Constraints for table `playlist_canciones`
 --
 ALTER TABLE `playlist_canciones`
   ADD CONSTRAINT `playlist_canciones_ibfk_1` FOREIGN KEY (`cancion_id`) REFERENCES `canciones` (`id`),
   ADD CONSTRAINT `playlist_canciones_ibfk_2` FOREIGN KEY (`playlist_id`) REFERENCES `playlist` (`id`);
 
 --
--- Filtros para la tabla `usuarios`
+-- Constraints for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`membresia_id`) REFERENCES `membresias` (`id`);
